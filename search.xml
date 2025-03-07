@@ -15,7 +15,7 @@
 <li><p><strong>查看当前系统的核版本</strong></p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">uname</span> -r</span><br></pre></td></tr></table></figure>
 </li>
-<li><p><strong>下载内核源码</strong><br>访问 <a href="https://mirrors.edge.kernel.org/pub/linux/kernel/">Linux 内核镜像站</a>，根据当前系统内核版本下载对应的源码包。<br>例如：若内核版本为 <code>5.15.116-rt-tegra</code>，则下载 <code>linux-5.15.116.tar.xz</code>。</p>
+<li><p><strong>下载内核源码</strong><br>访问 <a href="https://mirrors.edge.kernel.org/pub/linux/kernel/">Linux 内核镜像站</a>，根据当前系统内核版本下载对应的源码包。<br>例如：若内核版本为 <code>5.15.116-rt-tegra</code>，则下载 <code>linux-5.15.116.tar.gz</code>。</p>
 </li>
 </ol>
 <br>
@@ -24,7 +24,7 @@
 <li><p><strong>查看当前系统的核版本</strong></p>
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">uname</span> -r</span><br></pre></td></tr></table></figure>
 </li>
-<li><p><strong>下载内核源码</strong><br>访问 <a href="https://mirrors.edge.kernel.org/pub/linux/kernel/">Linux 内核镜像站</a>，根据当前系统内核版本下载对应的源码包。<br>例如：若内核版本为 <code>5.10.0</code>，则下载 <code>linux-5.10.tar.xz</code>。</p>
+<li><p><strong>下载内核源码</strong><br>访问 <a href="https://mirrors.edge.kernel.org/pub/linux/kernel/">Linux 内核镜像站</a>，根据当前系统内核版本下载对应的源码包。<br>例如：若内核版本为 <code>5.10.0</code>，则下载 <code>linux-5.10.tar.gz</code>。</p>
 </li>
 </ol>
 <br>
@@ -46,7 +46,7 @@
 <figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">sudo</span> apt-get install build-essential flex bison python3 python3-dev \</span><br><span class="line">  libelf-dev libnewt-dev libdw-dev libaudit-dev libiberty-dev \</span><br><span class="line">  libunwind-dev libcap-dev libzstd-dev libnuma-dev libssl-dev \</span><br><span class="line">  binutils-dev gcc-multilib liblzma-dev</span><br></pre></td></tr></table></figure>
 </li>
 <li><p><strong>编译 perf</strong></p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"><span class="built_in">cd</span> linux-5.10/tools/perf</span><br><span class="line"></span><br><span class="line">make -j$(<span class="built_in">nproc</span>)</span><br><span class="line"><span class="built_in">sudo</span> make install</span><br><span class="line"></span><br><span class="line">./perf --version</span><br></pre></td></tr></table></figure></li>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">tar zxvf linux-5.10.tar.gz &amp;&amp; \</span><br><span class="line"><span class="built_in">cd</span> linux-5.10/tools/perf &amp;&amp; \</span><br><span class="line"></span><br><span class="line">make -j$(<span class="built_in">nproc</span>) &amp;&amp; \</span><br><span class="line"><span class="built_in">sudo</span> make install &amp;&amp; \</span><br><span class="line"></span><br><span class="line">./perf --version</span><br></pre></td></tr></table></figure></li>
 </ol>
 <br>
 
